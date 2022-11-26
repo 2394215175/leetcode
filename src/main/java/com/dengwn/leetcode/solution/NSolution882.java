@@ -6,7 +6,7 @@ package com.dengwn.leetcode.solution;
  **/
 public class NSolution882 {
     public int reachableNodes(int[][] edges, int maxMoves, int n) {
-        return 0;
+        return 1;
     }
 
 }
