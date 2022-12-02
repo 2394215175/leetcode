@@ -861,6 +861,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/code/leetcode/editor/cn/[1106]解析布尔表达式.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/code/leetcode/editor/cn/doc/content/[1106]解析布尔表达式.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1106" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/main/code/leetcode/editor/cn/[1106]解析布尔表达式.java" />
+              <option name="titleSlug" value="parsing-a-boolean-expression" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/code/leetcode/editor/cn/[1769]移动所有球到每个盒子所需的最小操作数.java">
           <value>
             <LeetcodeEditor>
