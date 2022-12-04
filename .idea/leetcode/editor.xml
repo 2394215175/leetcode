@@ -883,6 +883,28 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/code/leetcode/editor/cn/[1774]最接近目标价格的甜点成本.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/code/leetcode/editor/cn/doc/content/[1774]最接近目标价格的甜点成本.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1774" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/main/code/leetcode/editor/cn/[1774]最接近目标价格的甜点成本.java" />
+              <option name="titleSlug" value="closest-dessert-cost" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/code/leetcode/editor/cn/[1796]字符串中第二大的数字.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/code/leetcode/editor/cn/doc/content/[1796]字符串中第二大的数字.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1796" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/main/code/leetcode/editor/cn/[1796]字符串中第二大的数字.java" />
+              <option name="titleSlug" value="second-largest-digit-in-a-string" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/code/leetcode/editor/cn/[790]多米诺和托米诺平铺.java">
           <value>
             <LeetcodeEditor>
