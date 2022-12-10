@@ -960,6 +960,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/code/leetcode/editor/cn/[252]会议室.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/code/leetcode/editor/cn/doc/content/[252]会议室.md" />
+              <option name="frontendQuestionId" value="leetcode.cn252" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/main/code/leetcode/editor/cn/[252]会议室.java" />
+              <option name="titleSlug" value="meeting-rooms" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/code/leetcode/editor/cn/[26]删除有序数组中的重复项.java">
           <value>
             <LeetcodeEditor>
