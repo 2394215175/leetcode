@@ -7,11 +7,11 @@ package com.dengwn.leetcode.solution;
 public class Solution2027 {
     public int minimumMoves(String s) {
         int ans = 0;
-        for(int i = 0; i< s.length();){
-            if(s.charAt(i) == 'X'){
-                i+=3;
+        for (int i = 0; i < s.length(); ) {
+            if (s.charAt(i) == 'X') {
+                i += 3;
                 ans++;
-            }else{
+            } else {
                 i++;
             }
         }
