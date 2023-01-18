@@ -1,5 +1,7 @@
 package com.dengwn.leetcode.solution;
 
+import com.dengwn.leetcode.solution.help876.ListNode;
+
 /**
  * @author: dengwn
  * @date: 2022-12-27
@@ -26,19 +28,4 @@ public class Solution876 {
     }
 }
 
-class ListNode {
-    int val;
-    ListNode next;
 
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}

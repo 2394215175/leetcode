@@ -1,5 +1,7 @@
 package com.dengwn.leetcode.solution;
 
+import com.dengwn.leetcode.solution.help876.ListNode;
+
 /**
  * @author: dengwn
  * @date: 2022-12-27

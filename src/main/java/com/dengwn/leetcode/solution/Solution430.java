@@ -1,5 +1,7 @@
 package com.dengwn.leetcode.solution;
 
+import com.dengwn.leetcode.solution.help430.Node;
+
 /**
  * @author: dengwn
  * @date: 2022-11-23
@@ -150,9 +152,3 @@ public class Solution430 {
 
 }
 
-class Node {
-    public int val;
-    public Node prev;
-    public Node next;
-    public Node child;
-}
