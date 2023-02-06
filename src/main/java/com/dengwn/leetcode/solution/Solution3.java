@@ -17,7 +17,6 @@ public class Solution3 {
             if (map.containsKey(c)) {
                 ans = Math.max(ans, i - pre);
                 pre = Math.max(map.get(c) + 1, pre);
-                map.put(c, i);
             }
             map.put(c, i);
             if (i == s.length() - 1) {
