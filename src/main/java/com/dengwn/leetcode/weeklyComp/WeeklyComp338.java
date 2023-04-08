@@ -96,43 +96,53 @@ public class WeeklyComp338 {
         return left;
     }
 
-    // 从0出发看能不能搜到结果
+    // todo 拓扑排序，先剪枝看看
     public int collectTheCoins(int[] coins, int[][] edges) {
         int n = coins.length;
-        int sum = 0;
-        for (int coin : coins) {
-            if (coin == 1) {
-                sum++;
-            }
-        }
-
-        Set<Integer>[][] lists = new Set[n][2];
+        Set<Integer>[][] sets = new Set[n][2];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < 2; j++) {
-                lists[i][j] = new HashSet<>();
+                sets[i][j] = new HashSet<>();
             }
         }
 
         for (int[] edge : edges) {
             int a = edge[0];
             int b = edge[1];
-            lists[a][0].add(b);
-            lists[b][0].add(a);
+            sets[a][0].add(b);
+            sets[b][0].add(a);
         }
 
-        for (Set<Integer>[] list : lists) {
+        for (Set<Integer>[] list : sets) {
             Set<Integer> second = new HashSet<>();
             for (Integer first : list[0]) {
-                second.addAll(lists[first][0]);
+                second.addAll(sets[first][0]);
             }
             list[1] = second;
         }
 
+        int[] steps = new int[n];
+        Arrays.fill(steps, Integer.MAX_VALUE);
 
+        for (int i = 0; i < n; i++) {
+            if (coins[i] == 1) {
+                for (Integer first : sets[i][0]) {
+                    steps[first] = 1;
+                }
+                for (Integer second : sets[i][1]) {
+                    steps[second] = 2;
+                }
+            }
+        }
 
-        return 0;
+        int ans = 0;
+        for (int[] edge : edges) {
+            if (steps[edge[0]] >= 2 && steps[edge[1]] >= 2) {
+                ans += 2;
+            }
+        }
+        return ans;
     }
-
 
 
     public static void main(String[] args) {
@@ -151,8 +161,8 @@ public class WeeklyComp338 {
 //        int[] queries = {50,84,76,41,64,82,20,22,64,7,38,92,39,28,22,3,41,46,47,50,88,51,9,49,38,67,26,65,89,27,71,25,77,72,65,41,84,68,51,26,84,24,79,41,96,83,92,9,93,84,35,70,74,79,37,38,26,26,41,26};
 //        System.out.println(weeklyComp338.minOperations(nums,queries));
 
-        int[] coins = {0, 0, 0, 1, 1, 0, 0, 1};
-        int[][] edges = {{0, 1}, {0, 2}, {1, 3}, {1, 4}, {2, 5}, {5, 6}, {5, 7}};
+        int[] coins = {1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0};
+        int[][] edges = {{0, 1}, {1, 2}, {1, 3}, {2, 4}, {4, 5}, {5, 6}, {5, 7}, {4, 8}, {7, 9}, {7, 10}, {10, 11}};
         System.out.println(weeklyComp338.collectTheCoins(coins, edges));
     }
 }
