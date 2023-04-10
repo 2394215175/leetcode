@@ -7,34 +7,30 @@ import java.util.Locale;
  * @date: 2023-04-01
  */
 public class Solution831 {
+    String[] country = {"", "+*-", "+**-", "+***-"};
+
     public String maskPII(String s) {
-        if (s.contains("@")) {
-            s = s.toLowerCase();
-            int index = s.indexOf("@");
-            String old = s.substring(1, index - 1);
-            return s.replaceFirst(old, "*****");
+        StringBuilder ans = new StringBuilder();
+        int index = s.indexOf("@");
+        if (index > 0) {
+            ans.append(s.substring(0, 1).toLowerCase())
+                    .append("*****")
+                    .append(s.substring(index - 1).toLowerCase());
         } else {
-            StringBuilder end = new StringBuilder("***-***-");
+            ans.append("***-***-");
             int nums = 0;
             for (int i = s.length() - 1; i >= 0; i--) {
                 char c = s.charAt(i);
                 if (c >= '0' && c <= '9') {
                     nums++;
-                    if (end.length() < 12) {
-                        end.append(c);
+                    if (ans.length() < 12) {
+                        ans.insert(8, c);
                     }
                 }
             }
-            if (nums == 10) {
-                return end.toString();
-            }
-            StringBuilder builder = new StringBuilder("+");
-            for (int i = 10; i < nums; i++) {
-                builder.append("*");
-            }
-            builder.append("-").append(end);
-            return builder.toString();
+            ans.insert(0, country[nums - 10]);
         }
+        return ans.toString();
     }
 
     public static void main(String[] args) {
