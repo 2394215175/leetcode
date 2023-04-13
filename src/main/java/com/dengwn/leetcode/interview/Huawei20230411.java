@@ -83,99 +83,52 @@ public class Huawei20230411 {
     }
 
     public int not101(int l, int r) {
-        return count(r) - count(l-1);
+        return count(r) - count(l - 1);
     }
 
 
     static int count(int x) {
-        if (x == 0) {
-            return 0;
+        int[] dp = new int[31];
+        dp[0] = 1;
+        dp[1] = 2;
+        dp[2] = 4;
+        for (int i = 3; i < 31; i++) {
+            dp[i] = dp[i - 1] + dp[i - 3] + dp[i - 1] - dp[i - 2];
         }
-        int[] bits = new int[Integer.toBinaryString(x).length()];
-        for (int i = bits.length - 1; i >= 0; i--) {
-            bits[i] = (x & 1 << i) != 0 ? 1 : 0;
-        }
-        int[][][] dp = new int[x][3][3];
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                dp[0][i][j] = 0;
-            }
-        }
-        for (int i = 1; i < x; i++) {
-            for (int j = 0; j < 3; j++) {
-                for (int k = 0; k < 3; k++) {
-                    dp[i][j][k] = 0;
-                    for (int u = 0; u < 2; u++) {
-                        if (j == 0 || (j == 1 && u == 0)) {
-                            dp[i][j][k] = dp[i][j][k] + dp[i - 1][u][k];
-                        }
-                    }
+        int preOfPre = 0;
+        int pre = 0;
+        int count = 0;
+        for (int i = 29; i >= 0; i--) {
+            int mask = 1 << i;
+            // 判断x的第i为是否为1
+            if ((x & mask) != 0) {
+                // 为1
+                x -= mask;
+                if (pre == 1) {
+                    count += i == 0 ? 1 : dp[i - 1];
+                } else {
+                    count += dp[i];
                 }
-            }
-        }
-        int ans = 0;
-        boolean flag = true;
-        for (int i = bits.length - 1; i >= 0; i--) {
-            if (bits[i] == 1) {
-                if (flag) {
-                    ans += dp[i][2][2];
+                if (preOfPre == 1 && pre == 0) {
+                    break;
                 }
-                flag = false;
-            } else if (!flag) {
-                ans += dp[i][2][0];
+                preOfPre = pre;
+                pre = 1;
+            } else {
+                preOfPre = pre;
+                pre = 0;
+            }
+            if (i == 0) {
+                count += 1;
             }
         }
-        return ans + dp[0][2][0];
+        return count;
     }
 
-    static BigInteger count(BigInteger x) {
-        if (x.equals(BigInteger.ZERO)) {
-            return BigInteger.ONE;
-        }
-        int[] bits = new int[x.bitLength()];
-        for (int i = bits.length - 1; i >= 0; i--) {
-            bits[i] = x.testBit(i) ? 1 : 0;
-        }
-        BigInteger[][][] dp = new BigInteger[bits.length][3][3];
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                dp[0][i][j] = BigInteger.ZERO;
-            }
-        }
-        dp[0][0][0] = BigInteger.ONE;
-        for (int i = 1; i < bits.length; i++) {
-            for (int j = 0; j < 3; j++) {
-                for (int k = 0; k < 3; k++) {
-                    dp[i][j][k] = BigInteger.ZERO;
-                    for (int u = 0; u < 2; u++) {
-                        if (j == 0 || (j == 1 && u == 0)) {
-                            dp[i][j][k] = dp[i][j][k].add(dp[i - 1][u][k]);
-                        }
-                    }
-                }
-            }
-        }
-        BigInteger ans = BigInteger.ZERO;
-        boolean flag = true;
-        for (int i = bits.length - 1; i >= 0; i--) {
-            if (bits[i] == 1) {
-                if (flag) {
-                    ans = ans.add(dp[i][2][2]);
-                }
-                flag = false;
-            } else if (!flag) {
-                ans = ans.add(dp[i][2][0]);
-            }
-        }
-        ans = ans.add(dp[0][2][0]);
-        return ans;
-    }
 
     public static void main(String[] args) {
         Huawei20230411 huawei20230411 = new Huawei20230411();
-        System.out.println(huawei20230411.not101(1,1000));
-        System.out.println(count(1000));
-        BigInteger bigInteger = new BigInteger("1000");
-        System.out.println(count(bigInteger));
+        System.out.println(huawei20230411.not101(1, 1000));
+//        System.out.println(count(1000));
     }
 }
