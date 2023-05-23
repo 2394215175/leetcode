@@ -2,6 +2,8 @@ package com.dengwn.leetcode;
 
 import java.util.*;
 
+import static com.sun.xml.internal.fastinfoset.util.ValueArray.MAXIMUM_CAPACITY;
+
 /**
  * @author dengwn
  * @date: 2023-04-22
@@ -85,6 +87,42 @@ public class LeetCodeSpring {
 //        String[] expeditions = {"xO->xO->xO", "xO->BKbWDH", "xO->BKbWDH", "BKbWDH->mWXW", "LSAYWW->LSAYWW", "oAibBvPdJ", "LSAYWW->u", "LSAYWW->LSAYWW"};
 //        System.out.println(leetCodeSwing.adventureCamp(expeditions));
 
+//        LinkedHashMap<String,String> linkedHashMap = new LinkedHashMap<>();
+//        linkedHashMap.containsKey()
 
+//        Object a = 10;
+//        int h;
+//        int hash = (h = a.hashCode()) ^ (h >>> 16);
+//        System.out.println(hash);
+
+
+        int n = 3 - 1;
+        n |= n >>> 1;
+        n |= n >>> 2;
+        n |= n >>> 4;
+        n |= n >>> 8;
+        n |= n >>> 16;
+        int a = (n < 0) ? 1 : (n >= 1 << 30) ? 1 << 30 : n + 1;
+        System.out.println(a);
+//        HashMap<String,String> map = new HashMap<>(2);
+//        System.out.println(1);
+//        System.out.println("-------");
+//        String put1 = map.put("1", "!");
+//        String put2 = map.put("1", "2");
+//        map.put("12","1121");
+//        map.put("444","1312");
+//
+//        System.out.println(put1);
+//        System.out.println(put2);
+//
+//        int newThr = 0;
+//        int newCap = 1;
+//        float ft = (float)newCap * 0.75f;
+//        newThr = (newCap < MAXIMUM_CAPACITY && ft < (float)MAXIMUM_CAPACITY ?
+//                (int)ft : Integer.MAX_VALUE);
+//        System.out.println(newThr);
+
+        System.out.println(1<<30);
+        System.out.println(Math.pow(2,30));
     }
 }
