@@ -125,8 +125,18 @@ public class WeeklyComp345 {
 //        int[][] grid = {{3, 2, 4}, {2, 1, 9}, {1, 1, 7}};
 //        System.out.println(weeklyComp345.maxMoves(grid));
 
-        int n = 6;
-        int[][] edges = {{0, 1}, {0, 2}, {1, 2}, {3, 4}};
-        System.out.println(weeklyComp345.countCompleteComponents(n, edges));
+//        int n = 6;
+//        int[][] edges = {{0, 1}, {0, 2}, {1, 2}, {3, 4}};
+//        System.out.println(weeklyComp345.countCompleteComponents(n, edges));
+
+//        byte a = (byte) 200;
+//        System.out.println(Integer.toBinaryString(200));
+//        System.out.println(Integer.toBinaryString(a));
+//        int b = a;
+//        System.out.println(b);
+//        System.out.println(Integer.toBinaryString(-56));
+//        System.out.println(Integer.parseInt("11001000",2));
+
+
     }
 }
