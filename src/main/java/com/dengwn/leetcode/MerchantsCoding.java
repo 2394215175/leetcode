@@ -4,7 +4,7 @@ package com.dengwn.leetcode;
  * @author: dengwn
  * @date: 2023-06-11
  **/
-public class MerchantsTest {
+public class MerchantsCoding {
 
     public boolean magicString(String s) {
         //"ccmm"
@@ -46,7 +46,7 @@ public class MerchantsTest {
 
 
     public static void main(String[] args) {
-        MerchantsTest merchantsTest = new MerchantsTest();
+        MerchantsCoding merchantsTest = new MerchantsCoding();
         System.out.println(merchantsTest.validNum(30));
     }
 }
