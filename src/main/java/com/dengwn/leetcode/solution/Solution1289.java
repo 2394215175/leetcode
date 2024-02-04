@@ -13,9 +13,8 @@ public class Solution1289 {
                 d[i][j] = Integer.MAX_VALUE;
             }
         }
-        for (int i = 0; i < n; i++) {
-            d[0][i] = grid[0][i];
-        }
+        System.arraycopy(grid[0], 0, d[0], 0, n);
+
         for (int i = 1; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 for (int k = 0; k < n; k++) {
