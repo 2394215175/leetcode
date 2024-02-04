@@ -1,8 +1,10 @@
 package com.dengwn.leetcode;
 
-import java.util.*;
 
-import static com.sun.xml.internal.fastinfoset.util.ValueArray.MAXIMUM_CAPACITY;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+
 
 /**
  * @author dengwn
