@@ -26,26 +26,6 @@ public class DoubleWeeklyComp107 {
         return 2 * (cnt + z);
     }
 
-    public int minimizeConcatenatedLength(String[] words) {
-        int n = words.length;
-        int[][] dp = new int[n][n];
-        for (int i = 0; i < n; i++) {
-            for (int j = i; j < n; j++) {
-                if (i == j) {
-                    dp[i][j] = words.length;
-                } else {
-                    for (int k = j - 1; k >= i; k--) {
-                        
-                    }
-                }
-            }
-        }
-    }
-
-    public int[] countServers(int n, int[][] logs, int x, int[] queries) {
-
-    }
-
     public static void main(String[] args) {
         DoubleWeeklyComp107 doubleWeeklyComp107 = new DoubleWeeklyComp107();
 
