@@ -6,7 +6,7 @@ import java.util.*;
  * @author: dengwn
  * @date: 2024-02-18
  **/
-public class WeeklyComp285 {
+public class WeeklyComp385 {
 
     public int countPrefixSuffixPairs(String[] words) {
         int count = 0;
@@ -128,19 +128,19 @@ public class WeeklyComp285 {
     }
 
     public static void main(String[] args) {
-        WeeklyComp285 weeklyComp285 = new WeeklyComp285();
+        WeeklyComp385 weeklyComp385 = new WeeklyComp385();
 //        String[] words = {"pa","papa","ma","mama"};
-//        System.out.println(weeklyComp285.countPrefixSuffixPairs(words));
+//        System.out.println(weeklyComp385.countPrefixSuffixPairs(words));
 
 //        int[] arr1 = {1, 10, 100};
 //        int[] arr2 = {1000};
-//        System.out.println(weeklyComp285.longestCommonPrefix(arr1, arr2));
+//        System.out.println(weeklyComp385.longestCommonPrefix(arr1, arr2));
 //
 //        int[][] mat = {{7}};
-//        System.out.println(weeklyComp285.mostFrequentPrime(mat));
+//        System.out.println(weeklyComp385.mostFrequentPrime(mat));
 
         String[] words = {"pa", "papa", "ma", "mama"};
-        System.out.println(weeklyComp285.countPrefixSuffixPairs2(words));
+        System.out.println(weeklyComp385.countPrefixSuffixPairs2(words));
     }
 
 
