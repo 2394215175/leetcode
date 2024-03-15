@@ -12,8 +12,8 @@ import java.util.Queue;
 public class Solution169 {
     public int majorityElement(int[] nums) {
         Map<Integer,Integer> map = new HashMap<>();
-        for (int i = 0; i < nums.length; i++) {
-            map.merge(nums[i], 1,Integer::sum);
+        for (int num : nums) {
+            map.merge(num, 1, Integer::sum);
         }
 
         int ans = 0;
@@ -25,6 +25,18 @@ public class Solution169 {
             }
         }
         return ans;
+    }
+
+    public int majorityElement1(int[] nums) {
+        int cnt = 0;
+        int candidate = 0;
+        for (int num : nums) {
+            if (cnt == 0) {
+                candidate = num;
+            }
+            cnt += (num == candidate) ? 1 : -1;
+        }
+        return candidate;
     }
 
     public static void main(String[] args) {

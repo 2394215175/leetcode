@@ -1,6 +1,9 @@
 package com.dengwn.leetcode.solution;
 
 import com.dengwn.leetcode.solution.help876.ListNode;
+import org.springframework.util.StringUtils;
+
+import java.util.Arrays;
 
 /**
  * @author: dengwn
@@ -8,7 +11,7 @@ import com.dengwn.leetcode.solution.help876.ListNode;
  **/
 public class Solution2 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        boolean carry = false;
+        boolean carry;
         ListNode ans = new ListNode(0);
         ListNode temp = ans;
         while (l1 != null || l2 != null) {

@@ -7,10 +7,8 @@ package com.dengwn.leetcode.solution;
 public class Solution26 {
     public int removeDuplicates(int[] nums) {
         int res = 0;
-        int pre = Integer.MIN_VALUE;
         for (int i = 0; i < nums.length; i++) {
-            if(nums[i] > pre){
-                pre = nums[i];
+            if (res < 1 || nums[i - 1] != nums[i]) {
                 nums[res] = nums[i];
                 res++;
             }
@@ -20,7 +18,7 @@ public class Solution26 {
 
     public static void main(String[] args) {
         Solution26 solution26 = new Solution26();
-        int[] nums = {0,0,1,1,1,2,2,3,3,4};
+        int[] nums = {1, 1, 2};
         System.out.println(solution26.removeDuplicates(nums));
     }
 }
