@@ -25,7 +25,7 @@ public class Solution322 {
 
     public static void main(String[] args) {
         Solution322 solution322 = new Solution322();
-        int[] coins = {186,419,83,408};
+        int[] coins = {186, 419, 83, 408};
         int amount = 6249;
         System.out.println(solution322.coinChange(coins, amount));
     }
