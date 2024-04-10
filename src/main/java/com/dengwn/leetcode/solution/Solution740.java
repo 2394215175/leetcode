@@ -7,14 +7,14 @@ package com.dengwn.leetcode.solution;
 public class Solution740 {
     public int deleteAndEarn(int[] nums) {
         int[] res = new int[10001];
-        for (int i = 0; i < nums.length; i++) {
-            res[nums[i]] += nums[i];
+        for (int num : nums) {
+            res[num] += num;
         }
         int first = 0;
         int second = 0;
-        for (int i = 0; i < res.length; i++) {
+        for (int re : res) {
             int temp = second;
-            second = Math.max(first + nums[i], second);
+            second = Math.max(first + re, second);
             first = temp;
         }
         return second;
