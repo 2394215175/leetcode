@@ -22,4 +22,27 @@ public class Solution1026 {
         }
         return ans;
     }
+
+    int ans = 0;
+
+    public void dfs1(int max, int min, TreeNode node) {
+        if (node == null) {
+            return;
+        }
+        max = Math.max(max, node.val);
+        min = Math.min(min, node.val);
+        ans = Math.max(ans, max - min);
+        dfs1(max, min, node.left);
+        dfs1(max, min, node.right);
+    }
+
+    public int dfs2(int max, int min, TreeNode node) {
+        if (node == null) {
+            return max - min;
+        }
+        int ans = 0;
+        max = Math.max(max, node.val);
+        min = Math.min(min, node.val);
+        return Math.max(ans, Math.max(dfs2(max, min, node.left), dfs2(max, min, node.right)));
+    }
 }
