@@ -1,9 +1,7 @@
 package com.dengwn.leetcode.solution;
 
 import com.dengwn.leetcode.solution.help876.ListNode;
-import org.springframework.util.StringUtils;
 
-import java.util.Arrays;
 
 /**
  * @author: dengwn
