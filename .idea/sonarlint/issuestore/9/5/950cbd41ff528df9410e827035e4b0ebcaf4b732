@@ -1,0 +1,10 @@
+
+š
+java:S3776
+"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(ø­¡ªúÿÿÿÿ8¦¸ƒ½ò1J$176744f1-63be-4498-a057-1ccd235f8df1
+ƒ	java:S125"<This block of commented-out lines of code should be removed.(ÅÑúÿÿÿÿÿ8§¸ƒ½ò1J$1145e96a-2730-4e2b-ae9a-0e7f5aacde57
+ƒ	java:S125"<This block of commented-out lines of code should be removed.(Ý˜âÃþÿÿÿÿ8§¸ƒ½ò1J$bb46cd84-e9f9-4f65-81f5-4171c379e8dc
+r	java:S106;"+Replace this use of System.out by a logger.(»ùŽƒÿÿÿÿÿ8¨¸ƒ½ò1J$01760719-c27f-4284-bcab-92ed790562d4
+r	java:S106="+Replace this use of System.out by a logger.(ªÓ¼áþÿÿÿÿ8¨¸ƒ½ò1J$59f9d2d1-8b7a-48da-a955-ceebda898d8d
+i
+java:S1128"&Remove this unused import 'java.util'.(Î€ŒÙ8¨¸ƒ½ò1J$7bdda67f-7ffa-4cd6-afae-6e90db1885ce

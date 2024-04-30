@@ -1,0 +1,9 @@
+
+
+java:S1854">Remove this useless assignment to local variable "privateKey".(âĞõ8ô’·Îñ1J$f66cf928-0f4f-4051-ba83-7bda74548ca1
+…
+java:S1854"=Remove this useless assignment to local variable "publicKey".(÷ÀÀğùÿÿÿÿ8ô’·Îñ1J$f82a6d38-b39e-4dcc-9db0-9810a822d598
+v
+java:S1481".Remove this unused "publicKey" local variable.(÷ÀÀğùÿÿÿÿ8ö’·Îñ1J$7c96d24a-e927-4ba6-bf54-dd47a944343a
+r
+java:S1481"/Remove this unused "privateKey" local variable.(âĞõ8ö’·Îñ1J$4a6faf49-e841-48f3-8874-f04cb24ca63d

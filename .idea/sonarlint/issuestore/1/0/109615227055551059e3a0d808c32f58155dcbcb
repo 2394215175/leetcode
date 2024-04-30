@@ -1,0 +1,14 @@
+
+>
+java:S1643;"Use a StringBuilder instead.(ÏúŠûÿÿÿÿ8ë­¢˜ò1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¦¦Õ8í­¢˜ò1
+o
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(ªœİÇ8í®¢˜ò1
+L	java:S106Q"+Replace this use of System.out by a logger.(ÜŒÈøÿÿÿÿ8ï®¢˜ò1
+]	java:S125R"<This block of commented-out lines of code should be removed.(ˆØÁ„üÿÿÿÿ8ğ®¢˜ò1
+N
+java:S1128"1Remove this unused import 'java.util.Comparator'.(î¹ó¹8ğ®¢˜ò1
+P
+java:S1128".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8ğ®¢˜ò1
+P
+java:S1128".Remove this unused import 'java.util.TreeMap'.(¨éˆèıÿÿÿÿ8ğ®¢˜ò1
