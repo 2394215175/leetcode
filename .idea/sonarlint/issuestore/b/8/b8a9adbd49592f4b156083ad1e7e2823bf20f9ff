@@ -1,9 +1,12 @@
 
-
-java:S1854">Remove this useless assignment to local variable "privateKey".(âĞõ8ô’·Îñ1J$f66cf928-0f4f-4051-ba83-7bda74548ca1
-…
-java:S1854"=Remove this useless assignment to local variable "publicKey".(÷ÀÀğùÿÿÿÿ8ô’·Îñ1J$f82a6d38-b39e-4dcc-9db0-9810a822d598
+›	java:S135m"YReduce the total number of break and continue statements in this loop to use at most one.(Æ²ş¢8´¬ãıù1J$8ed0d455-86cb-4f18-8c11-ceff288dd931
+›	java:S135h"YReduce the total number of break and continue statements in this loop to use at most one.(Ş¤ëå8´¬ãıù1J$6dfb41de-b2e3-4209-87b7-a9da498bf500
+•
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(‚åŠÜ8Á­ãıù1J$2bc4766d-8468-48ec-9490-07d61f308b78
+š
+java:S3776?"RRefactor this method to reduce its Cognitive Complexity from 42 to the 15 allowed.(ğ¥‘äøÿÿÿÿ8Ä­ãıù1J$8727c6d3-7fa9-4df0-b3b4-972f32258437
+n	java:S106–"+Replace this use of System.out by a logger.(Ü­•8È­ãıù1J$ef3c8f43-ff77-4c5b-94bc-4b3558592a89
 v
-java:S1481".Remove this unused "publicKey" local variable.(÷ÀÀğùÿÿÿÿ8ö’·Îñ1J$7c96d24a-e927-4ba6-bf54-dd47a944343a
-r
-java:S1481"/Remove this unused "privateKey" local variable.(âĞõ8ö’·Îñ1J$4a6faf49-e841-48f3-8874-f04cb24ca63d
+java:S1128".Remove this unused import 'java.util.TreeMap'.(¨éˆèıÿÿÿÿ8È­ãıù1J$01a80358-7fe5-4f88-8929-ace1590fbd8f
+
+java:S6541?"ÅA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 85 to 64, Complexity from 19 to 14, Nesting Level from 4 to 2, Number of Variables from 22 to 6.(ğ¥‘äøÿÿÿÿ8É­ãıù1J$931bdda3-dbd8-4f36-8551-2ec84d74c8a7

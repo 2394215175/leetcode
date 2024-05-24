@@ -2,31 +2,151 @@ package com.dengwn.leetcode;
 
 import java.util.TreeMap;
 
-/**
- * @author: dengwn
- * @date: 2024-03-11
- **/
+import java.util.*;
 
-public class Test {
+class Solution {
 
-    public static void main(String[] args) {
-        TreeMap<String, String> map = new TreeMap<>();
-        map.put("org_code", "50260001");
-        map.put("mch_id", "849440358120001");
-        map.put("nonce_str", "5K8264ILTKCH16CQ2502S");
-        map.put("charset", "UTF-8");
-        map.put("sign_type", "RSA");
-        map.put("sign", "hkE338srQZNp6gkb2sy");
-        map.put("pay_type", "wxpay");
-        map.put("sub_appid", "wxd930ea53421a258f4f");
-        map.put("mch_create_ip", "14.215.177.39");
-
-        String publicKey = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmcAGWK8/uRqCWc9kB4eCKlS6L8swew6s42MsU3h9MZ99re/9RZt1Vu6Vd9S8LanwC0Q4/r3C7tElffOMBmBijARD8Q0fDX8t9Ohr7oMkcxa2ltt+X+hl1KXLTDwpQHZsWfTkcToaM6aLlThJ8bqhoWYMEhCRAZDVwxKhfFIDGa8a/83sCv6uanHnmjWS7g49Yv0e3ciCswPmvnxuBSIBCTh7mCyNz4BTzQGVDwZsL2t8jOy06AvtROefOktR3/dhz5qbiBWW2qhGxsVQ+H3F2LVi1an4gKvY3f4LSF50fb1exa3WcAeAKhM5NSQrJoJz9LGVez3aerFdiVU+Lo4fEwIDAQAB";
-
-        String privateKey = "MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC4/SMF+Fe+aNPZvjPM3kQ4B8pAk19KMqbAWEPBpTY1ZjZfvAP3uhnaY9W+fiwcRqs/yadjasvPCTlsilCF/1yttidTqu+9gKMoOyqq/3GfWVRs/GpRLHSEVczg5tXIlrA8pAHl8nI1GZUxvaPNessHaWF8czEKlGgfPKFrD28umY7svw4BU639C2d8LoKtGr3m/kXiFhJlCKLYeO/NYGUK+bmt6A5+EavgWCAUPgPZx5tpB+PuGp8213aSQtAvLTxjOZTNm/63RmqZnl2ONIuJxxa+kCOmmF1Syncu4wEtW/zZwRs4swRXJIFXZYuZXLTCrZb2JJG/ey0ChY4diQHXAgMBAAECggEACJp9ToHGUuy9LZtS/Ww48AIsveQcwm6oorl4LUFpzAH89WbhKFxXZ3jNMBbeJlKDFGxkhJMq924OZaXpKNI/lTSrj5Cbpcydyfk2es12k1qsOoVizHOs15rF9I/H0ZRwjeFy1Sb5eM6/yZhwTdYwKyATkJ4q4bsVPJ6tQzVsjlYxottZMpYhpIRvyaz0MuGDL4McJj/6JrhaEKHMnJvKka66BUzat2zngoRbxgXVlhL3Vs0EA1T1MkOmVDjAPIOqz9jwxNffqIZLcfmHZ/wnaHnMvWA4gmTH2ZQ747m1PuItt+/FaL+anL6YrVzSR6lp7Y2OKZimsu0/BspixVlhAQKBgQDu7xwaWBeMS/lcJS4Qy0FpRlzhaSxNIe7gA/y2dRI596jWpYXsPzCoDWsmBt+d+5F6bSETG2ada+ttooMuDIbEmvjO8XrI2MxBc/aj8We4nYcTEL0mchCB3A5Z++dsKiIKibtKSWSk5GYS/vsrtHOFhPyUJOOVo1qrsD9qUBiKxwKBgQDGM6SghFX7K4VAlGt1QXQInWn84g6xNsvAu0y/3KOSFz0XGp6a1L+CMVdId2V8YohR4qzLayWENa+DPGyc/V31IqWCLrivc9CBJTzGQHLWkMSdnfQXMLoQAtJ/+WZVzYV8jLS8u9HJPueibBx2XN+k6b7PJq/TfpE5FlrWje5AcQKBgFYJdfYqiHg1l1pN7RORDUHKW4GzrIct0+WIqgRNjb2f54U7X0kdy/iHtHCiAv3Ra6ZJC6LkuAOxq7nzzgbT7ed34mYqYEtYfdyH1GVedTnuR4he+62PX1BTnDtc0Q2K8m0XAYETgpE5yWPHu0wWk46dv5Hc4rKseubd9UfkBaJbAoGAHRWc9dUVjOsA/c4JysYVEeKPmAVQJJ8m3RxfEdR9yEVSuJ42YgAQLjmxVjf3E36eBG4f7yXE9pauL7LhOVRQwlUYNndGsLBtC1Z8iZcRgvzxbTOtiu2ikBDp9M+TPcoP6Yv4Ra3GBiMN+J6mupO8WcXXMyy5Jm7vPpJSOCPRr3ECgYBvkU9yoWbVeMdVE/v5PM4KfIgXD82MQKmaDuZt1ZfN4ePc7omkWDR4JiOcq/ZmUzN2ki4kXEYIq0qZ0+zUM4GN7oaNJY9ag1c3jgouyMBd9f1uaVX1vbNC791C7R9A9C+dxxY+x0j6CauUAOX0/lYs05WiDy2nepcPZNBjqxQnZg==";
-
-
+    int getState(boolean[] flag) {
+        int base = 0;
+        for (boolean b : flag) {
+            base <<= 1;
+            if (b) {
+                base += 1;
+            }
+        }
+        return base;
     }
 
+    int dfs(int[][][] dp, int[] nums, int a, int b, boolean[] flag) {
+        int state = getState(flag);
+        if (nums.length % 2 == 1) {
+            int cnt = 0;
+            int num = 0;
+            for (int i = 0; i < nums.length; i += 1) {
+                if (!flag[i]) {
+                    cnt += 1;
+                    num = i;
+                }
+            }
+            if (cnt == 1) {
+                dp[state][a][b] = Math.abs(a - nums[num]) + Math.abs(num - nums[b]);
+                return dp[state][a][b];
+            }
+        }
+        if (state == (1 << nums.length) - 1) {
+            dp[state][a][b] = Math.abs(a - nums[b]);
+        }
+        if (dp[state][a][b] != -1) {
+            return dp[state][a][b];
+        }
+        int min = Integer.MAX_VALUE;
+        for (int i = 0; i < nums.length; i += 1) {
+            if (flag[i]) {
+                continue;
+            }
+            flag[i] = true;
+            for (int j = 0; j < nums.length; j += 1) {
+                if (flag[j]) {
+                    continue;
+                }
+                flag[j] = true;
+                int score = Math.abs(a - nums[i]) + Math.abs(j - nums[b]);
+                min = Math.min(min, score + dfs(dp, nums, i, j, flag));
+                flag[j] = false;
+            }
+            flag[i] = false;
+        }
+        dp[state][a][b] = min;
+        return dp[state][a][b];
+    }
 
+    public int[] findPermutation(int[] nums) {
+        int[][][] dp = new int[1 << nums.length][nums.length][nums.length];
+        int[] ans = new int[nums.length];
+        for (int[][] ints : dp) {
+            for (int j = 0; j < dp[0].length; j += 1) {
+                Arrays.fill(ints[j], -1);
+            }
+        }
+        int min = Integer.MAX_VALUE;
+        boolean[] flag = new boolean[nums.length];
+        int a = 0;
+        int b = 0;
+        for (int i = 0; i < nums.length; i += 1) {
+            if (flag[i]) {
+                continue;
+            }
+            flag[i] = true;
+            for (int j = nums.length - 1; j >= 0; j -= 1) {
+                if (flag[j]) {
+                    continue;
+                }
+                flag[j] = true;
+                int score = Math.abs(j - nums[i]) + dfs(dp, nums, i, j, flag);
+                if (score < min) {
+                    a = i;
+                    b = j;
+                    min = score;
+                }
+                flag[j] = false;
+            }
+            flag[i] = false;
+        }
+        ans[0] = a;
+        ans[nums.length - 1] = b;
+        flag[a] = true;
+        flag[b] = true;
+        int rest = min - Math.abs(b - nums[a]);
+        int l = 1;
+        int r = nums.length - 2;
+        while (l < r) {
+            boolean quit = false;
+            for (int i = 0; i < nums.length; i += 1) {
+                if (flag[i]) {
+                    continue;
+                }
+                flag[i] = true;
+                for (int j = nums.length - 1; j >= 0; j -= 1) {
+                    if (flag[j]) {
+                        continue;
+                    }
+                    flag[j] = true;
+                    int score = Math.abs(ans[l - 1] - nums[i]) + Math.abs(j - nums[ans[r + 1]]);
+                    if (rest - score == dp[getState(flag)][i][j]) {
+                        rest -= score;
+                        ans[l] = i;
+                        ans[r] = j;
+                        quit = true;
+                        break;
+                    }
+                    flag[j] = false;
+                }
+                if (quit) {
+                    break;
+                }
+                flag[i] = false;
+            }
+            l += 1;
+            r -= 1;
+        }
+        if (nums.length % 2 == 1) {
+            Arrays.fill(flag, false);
+            for (int i : ans) {
+                flag[i] = true;
+            }
+            int num = 0;
+            for (int i = 0; i < nums.length; i += 1) {
+                if (!flag[i]) {
+                    num = i;
+                    break;
+                }
+            }
+            ans[nums.length / 2] = num;
+        }
+        return ans;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(new Solution().findPermutation(new int[]{0,3,2,1})));
+    }
 }
