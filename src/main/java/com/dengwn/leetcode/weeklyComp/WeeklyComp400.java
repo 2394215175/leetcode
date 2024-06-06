@@ -68,6 +68,20 @@ public class WeeklyComp400 {
         return ans.toString();
     }
 
+    public int minimumDifference(int[] nums, int k) {
+        int n = nums.length;
+        int ans = Integer.MAX_VALUE;
+        for (int i = 0; i < n; i++) {
+            int x = nums[i];
+            ans = Math.min(ans, Math.abs(x - k));
+            for (int j = i; j >= 0 && (x & nums[j]) != nums[j]; j--) {
+                nums[j] &= x;
+                ans = Math.min(ans, Math.abs(nums[j] - k));
+            }
+        }
+        return ans;
+    }
+
     public static void main(String[] args) {
         WeeklyComp400 weeklyComp400 = new WeeklyComp400();
 

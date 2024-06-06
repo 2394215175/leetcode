@@ -9,8 +9,6 @@ m
 =src/main/java/com/dengwn/leetcode/solution/NSolution1448.java,8/8/88f03552e1eb9b330e4de3961d2673041b4c0057
 l
 <src/main/java/com/dengwn/leetcode/solution/Solution1146.java,e/8/e85c7b3082462614db1d178cd14c74269332152b
-[
-+src/main/java/com/dengwn/leetcode/Test.java,b/8/b8a9adbd49592f4b156083ad1e7e2823bf20f9ff
 l
 <src/main/java/com/dengwn/leetcode/solution/Solution1017.java,b/a/ba75e5792b1e87e7e0ac4a61e9301488b92b55ba
 o
@@ -31,8 +29,6 @@ S
 #.idea/sonarlint/issuestore/index.pb,9/f/9fe84ebb15faf917b7def6236dba604453cc61e0
 
 Q.idea/sonarlint/securityhotspotstore/8/7/8784087db184f0426abd3078acd6b1d47d1b6bae,b/7/b7dcaa7d7c354d395710a208189c730aaa378328
-
-Q.idea/sonarlint/securityhotspotstore/b/8/b8a9adbd49592f4b156083ad1e7e2823bf20f9ff,6/c/6c60ebcb311c96f277bcf4a0859d7f138f407962
 
 Q.idea/sonarlint/securityhotspotstore/8/f/8f41bc8bdf0ae2d003e134e1ab79d82555e0f557,7/2/72839989d7e3a74fa7c5ec07828b271bdd67f868
 
@@ -146,8 +142,16 @@ l
 l
 <src/main/java/com/dengwn/leetcode/solution/Solution1103.java,3/8/38ecf880cc79e99859a834b89a16292120f1cdce
 l
-<src/main/java/com/dengwn/leetcode/solution/Solution2067.java,b/5/b50448e2c9bc241ba705d1aa3669fb47e40e3123
-l
 <src/main/java/com/dengwn/leetcode/solution/Solution3067.java,c/1/c1d591e9839c011b600d076886ccbfd141c11460
 o
 ?src/main/java/com/dengwn/leetcode/weeklyComp/WeeklyComp397.java,5/2/521a5baf5dfbfdf901f8a3dc7c4d6f3510b792fc
+o
+?src/main/java/com/dengwn/leetcode/weeklyComp/WeeklyComp394.java,9/d/9dec68369313967191d0afaff6a4be758880052a
+e
+5src/main/java/com/dengwn/leetcode/LeetCodeSpring.java,0/6/0606b2c83f50000adcb6f53a860f9443143342f8
+{
+Ksrc/main/java/com/dengwn/leetcode/doubleWeeklyComp/DoubleWeeklyComp130.java,6/6/66cc8c9cb16b5ac18b84a59caed83b5e663f3d7a
+l
+<src/main/java/com/dengwn/leetcode/solution/Solution3072.java,d/1/d1c453f060b61fa88738dcbf5f3310bf604b4cb5
+l
+<src/main/java/com/dengwn/leetcode/solution/Solution2938.java,e/c/ecec48b93b231f0038919cb2d91de5ca30256279

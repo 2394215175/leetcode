@@ -44,16 +44,6 @@ public class WeeklyComp399 {
         return sb.toString();
     }
 
-    /**
-     * 给你两个整数数组 nums1 和 nums2，长度分别为 n 和 m。同时给你一个正整数 k。
-     * 如果 nums1[i] 可以被 nums2[j] * k 整除，则称数对 (i, j) 为 优质数对（0 <= i <= n - 1, 0 <= j <= m - 1）。
-     * 返回 优质数对 的总数。
-     *
-     * @param nums1
-     * @param nums2
-     * @param k
-     * @return
-     */
     public long numberOfPairs1(int[] nums1, int[] nums2, int k) {
         int n = 1000001;
         int[] map = new int[n];
@@ -74,6 +64,11 @@ public class WeeklyComp399 {
             ans += num < n ? map[num] : 0;
         }
         return ans;
+    }
+
+    // 线段树
+    public int maximumSumSubsequence(int[] nums, int[][] queries) {
+        return 0;
     }
 
     public static void main(String[] args) {
