@@ -1,6 +1,6 @@
 package com.dengwn.leetcode.swordFingerOffer;
 
-import com.dengwn.leetcode.solution.help876.ListNode;
+import com.dengwn.leetcode.solution.t0.h8.help876.ListNode;
 
 import java.util.Stack;
 
