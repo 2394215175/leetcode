@@ -1,6 +1,6 @@
-package com.dengwn.leetcode.solution.t0.h5;
+package com.dengwn.leetcode.solution.t0.h5.d8;
 
-import com.dengwn.leetcode.solution.t0.h5.help589.Node;
+import com.dengwn.leetcode.solution.t0.h5.d8.help589.Node;
 
 import java.util.LinkedList;
 import java.util.List;

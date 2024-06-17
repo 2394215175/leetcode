@@ -1,4 +1,4 @@
-package com.dengwn.leetcode.solution.t0.h5.help589;
+package com.dengwn.leetcode.solution.t0.h5.d8.help589;
 
 import java.util.List;
 
