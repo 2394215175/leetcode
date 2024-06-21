@@ -1,6 +1,6 @@
 package com.dengwn.leetcode.solution.t1.h0.d1;
 
-import com.dengwn.leetcode.solution.t0.h8.help876.ListNode;
+import com.dengwn.leetcode.solution.t0.h8.d7.help876.ListNode;
 
 import java.util.Arrays;
 import java.util.HashMap;
