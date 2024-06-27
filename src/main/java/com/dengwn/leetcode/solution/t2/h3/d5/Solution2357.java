@@ -1,4 +1,4 @@
-package com.dengwn.leetcode.solution.t2.h3;
+package com.dengwn.leetcode.solution.t2.h3.d5;
 
 import java.util.HashSet;
 import java.util.Set;
