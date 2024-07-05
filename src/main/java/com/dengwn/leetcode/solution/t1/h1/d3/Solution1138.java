@@ -1,4 +1,4 @@
-package com.dengwn.leetcode.solution.t1.h1;
+package com.dengwn.leetcode.solution.t1.h1.d3;
 
 import java.util.HashMap;
 

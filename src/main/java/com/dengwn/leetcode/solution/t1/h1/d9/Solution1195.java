@@ -1,4 +1,4 @@
-package com.dengwn.leetcode.solution.t1.h1;
+package com.dengwn.leetcode.solution.t1.h1.d9;
 
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.IntConsumer;

@@ -1,4 +1,4 @@
-package com.dengwn.leetcode.solution.t1.h1;
+package com.dengwn.leetcode.solution.t1.h1.d7;
 
 import com.dengwn.leetcode.solution.t0.h8.d7.help876.ListNode;
 
