@@ -21,7 +21,10 @@ public class Solution152 {
             ans = Math.max(ans, max);
         }
         return ans;
+    }
 
+    public static void main(String[] args) {
+        Solution152 solution152 = new Solution152();
 
     }
 }
