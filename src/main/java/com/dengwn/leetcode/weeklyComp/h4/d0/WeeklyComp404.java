@@ -1,4 +1,4 @@
-package com.dengwn.leetcode.weeklyComp.h4.d1;
+package com.dengwn.leetcode.weeklyComp.h4.d0;
 
 /**
  * @author dengwenning

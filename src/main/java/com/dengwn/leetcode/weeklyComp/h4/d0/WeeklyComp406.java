@@ -1,4 +1,4 @@
-package com.dengwn.leetcode.weeklyComp.h4.d1;
+package com.dengwn.leetcode.weeklyComp.h4.d0;
 
 import com.dengwn.leetcode.solution.t0.h8.d7.help876.ListNode;
 
