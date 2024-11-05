@@ -1,4 +1,4 @@
-package com.dengwn.code.leetcode.solution.t2.h9;
+package com.dengwn.code.leetcode.solution.t2.h9.d6;
 
 /**
  * @author dengwenning

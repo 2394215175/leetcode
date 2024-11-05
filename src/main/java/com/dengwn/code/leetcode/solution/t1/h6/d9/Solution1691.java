@@ -1,4 +1,4 @@
-package com.dengwn.code.leetcode.solution.t1.h6;
+package com.dengwn.code.leetcode.solution.t1.h6.d9;
 
 import java.util.Arrays;
 import java.util.Comparator;

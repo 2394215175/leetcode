@@ -1,8 +1,5 @@
-package com.dengwn.code.codeforce.d1024;
+package com.dengwn.code.codeforce.m10.d24;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 /**
