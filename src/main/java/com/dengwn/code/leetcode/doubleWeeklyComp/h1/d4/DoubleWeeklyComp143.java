@@ -1,5 +1,9 @@
 package com.dengwn.code.leetcode.doubleWeeklyComp.h1.d4;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
 /**
  *
  * @author dengwenning
@@ -26,7 +30,21 @@ public class DoubleWeeklyComp143 {
     }
 
     public int maxFrequency(int[] nums, int k, int numOperations) {
-        return 0;
+        Map<Integer, Integer> cnt = new HashMap<>();
+        TreeMap<Integer, Integer> diff = new TreeMap<>();
+        for (int num : nums) {
+            cnt.merge(num, 1, Integer::sum);
+            diff.putIfAbsent(num, 0);
+            diff.merge(num - k, 1, Integer::sum);
+            diff.merge(num + k + 1, -1, Integer::sum);
+        }
+        int ans = 0;
+        int sum = 0;
+        for (Map.Entry<Integer, Integer> entry : diff.entrySet()) {
+            sum += entry.getValue();
+            ans = Math.max(ans, Math.min(sum, cnt.getOrDefault(entry.getKey(), 0) + numOperations));
+        }
+        return ans;
     }
 
     public static void main(String[] args) {
