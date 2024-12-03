@@ -1,4 +1,4 @@
-package com.dengwn.code.leetcode.solution.t0.h7;
+package com.dengwn.code.leetcode.solution.t0.h7.d3;
 
 import java.util.LinkedList;
 import java.util.Queue;

@@ -1,4 +1,4 @@
-package com.dengwn.code.leetcode.solution.t0.h6;
+package com.dengwn.code.leetcode.solution.t0.h6.d1;
 
 import com.dengwn.code.leetcode.solution.TreeNode;
 

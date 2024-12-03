@@ -1,23 +1,37 @@
 package com.dengwn.code.leetcode.solution.t0.h0.d5;
 
-/**
- * @author: dengwn
- * @date: 2022-11-16
- **/
-public class Solution52 {
-    /**
-     * 摆放方案的个数
-     */
-    int count = 0;
+import java.util.ArrayList;
+import java.util.List;
 
-    public int totalNQueens(int n) {
+/**
+ *
+ * @author dengwenning
+ * @since 2024/12/2
+ **/
+public class Solution51 {
+
+    List<List<String>> ans = new ArrayList<>();
+
+    public List<List<String>> solveNQueens(int n) {
         dfs(0, n, new int[n]);
-        return count;
+        return ans;
     }
 
     public void dfs(int n, int max, int[] arr) {
         if (n == max) {
-            count++;
+            List<String> list = new ArrayList<>();
+            for (int i = 0; i < n; i++) {
+                StringBuilder sb = new StringBuilder();
+                for (int j = 0; j < n; j++) {
+                    if (j == arr[i]) {
+                        sb.append("Q");
+                    } else {
+                        sb.append(".");
+                    }
+                }
+                list.add(sb.toString());
+            }
+            ans.add(list);
             return;
         }
         // 对每个皇后，都依次去尝试摆放在每一列
@@ -42,25 +56,9 @@ public class Solution52 {
         return true;
     }
 
-
-//    public int solve(int n, int row, int columns, int diagonals1, int diagonals2) {
-//        if (row == n) {
-//            return 1;
-//        } else {
-//            int count = 0;
-//            int availablePositions = ((1 << n) - 1) & (~(columns | diagonals1 | diagonals2));
-//            while (availablePositions != 0) {
-//                int position = availablePositions & (-availablePositions);
-//                availablePositions = availablePositions & (availablePositions - 1);
-//                count += solve(n, row + 1, columns | position, (diagonals1 | position) << 1, (diagonals2 | position) >> 1);
-//            }
-//            return count;
-//        }
-//    }
-
-
     public static void main(String[] args) {
-        Solution52 solution52 = new Solution52();
-        System.out.println(solution52.totalNQueens(4));
+        Solution51 solution52 = new Solution51();
+        System.out.println(solution52.solveNQueens(4));
     }
+
 }
