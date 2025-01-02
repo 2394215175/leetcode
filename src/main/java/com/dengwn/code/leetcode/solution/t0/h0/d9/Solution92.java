@@ -8,35 +8,36 @@ import com.dengwn.code.leetcode.solution.t0.h8.d7.help876.ListNode;
  **/
 public class Solution92 {
     public ListNode reverseBetween(ListNode head, int left, int right) {
-        ListNode node = new ListNode(0, head);
-
-        ListNode pre = node;
+        ListNode ans = new ListNode(0, head);
+        ListNode temp = ans;
         for (int i = 0; i < left - 1; i++) {
-            pre = pre.next;
+            temp = temp.next;
+        }
+        ListNode leftNode = temp;
+        temp = temp.next;
+        for (int i = left; i <= right; i++) {
+            temp = temp.next;
+        }
+        ListNode rightNode = null;
+        if (temp != null) {
+            rightNode = temp.next;
+            temp.next = null;
         }
 
-        ListNode rightNode = pre;
-        for (int i = 0; i < right - left + 1; i++) {
-            rightNode = rightNode.next;
+        ListNode reversedNode = reverse(leftNode.next);
+
+        leftNode.next = reversedNode;
+        if (reversedNode != null) {
+            while (reversedNode.next != null) {
+                reversedNode = reversedNode.next;
+            }
+            reversedNode.next = rightNode;
         }
 
-        ListNode rightPart = rightNode.next;
-        rightNode.next = null;
-
-        ListNode leftNode = pre.next;
-
-        ListNode reversed = reverseList(leftNode);
-
-        pre.next = reversed;
-        while (reversed.next != null){
-            reversed = reversed.next;
-        }
-        reversed.next = rightPart;
-
-        return node.next;
+        return ans.next;
     }
 
-    public ListNode reverseList(ListNode head) {
+    public ListNode reverse(ListNode head) {
         ListNode prev = null;
         ListNode curr = head;
         while (curr != null) {
@@ -50,7 +51,7 @@ public class Solution92 {
 
     public static void main(String[] args) {
         Solution92 solution92 = new Solution92();
-        ListNode node = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
-        System.out.println(solution92.reverseBetween(node, 2, 4));
+        ListNode node = new ListNode(3, new ListNode(5));
+        System.out.println(solution92.reverseBetween(node, 1, 2));
     }
 }

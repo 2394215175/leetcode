@@ -8,12 +8,25 @@ public class Solution32 {
     public int longestValidParentheses(String s) {
         int n = s.length();
         char[] array = s.toCharArray();
-        int[] dp = new int[n + 1];
-        for (int i = 1; i < n+1; i++) {
-            dp[i] = dp[i - 1] + (array[i - 1] == '(' ? 1 : -1);
-        }
+        int[] dp = new int[n];
         int ans = 0;
-        int prev = 0;
-        return 0;
+        for (int i = 1; i < n; i++) {
+            if (array[i] == '(') {
+                continue;
+            }
+            if (array[i - 1] == '(') {
+                dp[i] = i - 2 >= 0 ? dp[i - 2] + 2 : 2;
+            } else if (i - dp[i - 1] - 1 >= 0 && array[i - dp[i - 1] - 1] == '(') {
+                dp[i] = (i - dp[i - 1] - 2 >= 0 ? dp[i - dp[i - 1] - 2] : 0) + dp[i - 1] + 2;
+            }
+            ans = Math.max(ans, dp[i]);
+        }
+
+        return ans;
+    }
+
+    public static void main(String[] args) {
+        Solution32 solution32 = new Solution32();
+        System.out.println(solution32.longestValidParentheses("(()())"));
     }
 }

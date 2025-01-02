@@ -36,9 +36,9 @@ public class WeeklyComp415 {
     }
 
     // Trie 节点类
-    class TrieNode {
-        TrieNode[] children;
-        boolean isEndOfWord;
+    public class TrieNode {
+        public TrieNode[] children;
+        public boolean isEndOfWord;
 
         public TrieNode() {
             children = new TrieNode[26];  // 假设只包含小写字母
@@ -47,8 +47,8 @@ public class WeeklyComp415 {
     }
 
     // 构建 Trie 树类
-    class Trie {
-        TrieNode root;
+    public class Trie {
+        public TrieNode root;
 
         public Trie() {
             root = new TrieNode();
@@ -130,8 +130,8 @@ public class WeeklyComp415 {
 //        System.out.println(weeklyComp415.maxScore(a, b));
 
 
-        String[] words = {"abc", "aaaaa", "bcdef"};
-        String target = "aabcdabc";
+        String[] words = {"bbbbbbbbbbb","a"};
+        String target = "aaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbb";
         System.out.println(weeklyComp415.minValidStrings(words, target));
 
 
