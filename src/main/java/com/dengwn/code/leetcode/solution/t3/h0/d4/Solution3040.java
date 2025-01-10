@@ -1,4 +1,4 @@
-package com.dengwn.code.leetcode.solution.t3.h0;
+package com.dengwn.code.leetcode.solution.t3.h0.d4;
 
 import java.util.Arrays;
 
