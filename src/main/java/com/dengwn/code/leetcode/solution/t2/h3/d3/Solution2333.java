@@ -1,6 +1,5 @@
 package com.dengwn.code.leetcode.solution.t2.h3.d3;
 
-import lombok.var;
 
 import java.util.*;
 
@@ -47,15 +46,15 @@ public class Solution2333 {
     public long minSumSquareDiff1(int[] a, int[] nums2, int k1, int k2) {
         int n = a.length, k = k1 + k2;
         long ans = 0L, sum = 0L;
-        for (var i = 0; i < n; ++i) {
+        for (int i = 0; i < n; ++i) {
             a[i] = Math.abs(a[i] - nums2[i]);
             sum += a[i];
             ans += (long) a[i] * a[i];
         }
         if (sum <= k) return 0; // 所有 a[i] 均可为 0
         Arrays.sort(a);
-        for (var i = n - 1; ; --i) {
-            var m = n - i;
+        for (int i = n - 1; ; --i) {
+            int m = n - i;
             long v = a[i], c = m * (v - (i > 0 ? a[i - 1] : 0));
             ans -= v * v;
             if (c < k) {
