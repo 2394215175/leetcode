@@ -9,16 +9,15 @@ import java.util.Map;
  **/
 public class Solution1742 {
     public int countBalls(int lowLimit, int highLimit) {
-        Map<Integer, Integer> map = new HashMap<>();
+        int[] cnt = new int[50];
         for (int i = lowLimit; i <= highLimit; i++) {
-            map.merge(calculateSize(i), 1, Integer::sum);
+            cnt[calculateSize(i)]++;
         }
-
-        int max = 0;
-        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            max = Math.max(max, entry.getValue());
+        int ans = 0;
+        for (int i = 0; i < 50; i++) {
+            ans = Math.max(ans, cnt[i]);
         }
-        return max;
+        return ans;
     }
 
     public int calculateSize(int n) {
